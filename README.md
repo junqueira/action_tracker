@@ -6,4 +6,5 @@ Requirements
 
 - Django
 - AngularJS
+- Twitter Bootstrap
 
