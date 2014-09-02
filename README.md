@@ -1,4 +1,9 @@
-active_tracker
+Active Tracker
 ==============
 
-active_tracker
+Requirements
+------------
+
+1 - Django
+2 - AngularJS
+
