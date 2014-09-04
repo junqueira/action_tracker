@@ -1,0 +1,12 @@
+Django==1.7
+amqp==1.4.6
+anyjson==0.3.3
+billiard==3.3.0.18
+celery==3.1.13
+django-angular==0.7.5
+ipdb==0.8
+ipython==2.2.0
+kombu==3.0.21
+pytz==2014.7
+six==1.7.3
+wsgiref==0.1.2
