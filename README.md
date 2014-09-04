@@ -10,3 +10,4 @@ Requirements
 - Twitter Bootstrap - <http://getbootstrap.com/>
 - Celery - <https://github.com/celery/celery>
 - RabbitMQ - <http://www.rabbitmq.com/>
+- Tastypie - <http://tastypieapi.org/>
