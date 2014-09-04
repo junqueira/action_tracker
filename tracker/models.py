@@ -37,3 +37,7 @@ class TaskDependency(models.Model):
     dependent_task = models.ForeignKey(Task, related_name='dependent_task')
     # This, in turn, points to the specific Task that is holding the conclusion of another one.
     depends_on = models.ForeignKey(Task, related_name='depends_on')
+
+    def save(self):
+        if self.dependent_task == self.depends_on:
+            raise AttributeError('A Task cannot depend on itself.')
