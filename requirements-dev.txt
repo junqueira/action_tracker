@@ -10,3 +10,7 @@ kombu==3.0.21
 pytz==2014.7
 six==1.7.3
 wsgiref==0.1.2
+pytest
+pytest-cov>=1.4
+pytest-django
+pytest-timeout
