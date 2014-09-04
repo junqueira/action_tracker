@@ -25,4 +25,3 @@ clean:
 	find . -name "*.pyc" -delete
 	rm -rf build
 	rm -rf dist
-	rm README.rst

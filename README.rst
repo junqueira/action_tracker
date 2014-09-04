@@ -2,39 +2,25 @@ Action Tracker
 ==============
 
 
-Topics
-
-    Description
-    Images
-    How I can help
-    Where I can start
-    Links
-    Resources
-        Documentation
-        Bugtracker
-
-
 Description
-===========
+-----------
 
 A task and project management system with Angular and fun!.
 
 
 Images or Screenshots
-=====================
+---------------------
 
 TODO
 
 
 How can I help
-==============
+--------------
 
 TODO
 
 Links
-=====
-Requirements
-------------
+-----
 
 - Django - <https://github.com/django/>
 - AngularJS - <https://github.com/angular/angular.js>
@@ -46,8 +32,7 @@ Requirements
 
 
 Resources
-=========
+---------
 
-- https://github.com/nokiadev/action_tracker
-
-
+* `Code <https://github.com/nokiadev/action_tracker>`_
+* `Bug Tracker <https://github.com/nokiadev/action_tracker/issues>`_

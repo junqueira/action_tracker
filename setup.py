@@ -29,7 +29,7 @@ install_requires_dev = [str(i.req) for i in parse_requirements('requeriments-dev
 
 def readme():
     try:
-        os.system('pandoc --from=markdown --to=rst README.md -o README.rst')
+        # os.system('pandoc --from=markdown --to=rst README.md -o README.rst')
         with open('README.rst') as f:
             return f.read()
     except:
