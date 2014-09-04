@@ -24,21 +24,29 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
-
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+)
+
+PROJECT_APPS = (
     'tracker',
+    'public',
+)
+
+THIRDY_APPS = (
     'djangular',
 )
+
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRDY_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -89,3 +97,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
+
+# TASTYPIE
+TASTYPIE_FULL_DEBUG = True
+API_LIMIT_PER_PAGE = 100
+TASTYPIE_ALLOW_MISSING_SLASH = False
+TASTYPIE_DEFAULT_FORMATS = ['json']
