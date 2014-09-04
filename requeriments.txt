@@ -1,0 +1,4 @@
+Django==1.7
+South==1.0
+django-angular==0.7.5
+six==1.7.3
