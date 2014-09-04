@@ -19,3 +19,11 @@ class TaskOwner(models.Model):
 
     user = models.ForeignKey(User)
     task = models.ForeignKey(Task)
+
+
+class TaskAssignedTo(models.Model):
+    #log fields
+    creation_date = models.DateTimeField(auto_now_add=True)
+
+    user = models.ForeignKey(User)
+    task = models.ForeignKey(Task)
