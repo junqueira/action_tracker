@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'active_tracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.active_traker'),
+        'NAME': os.path.join(BASE_DIR, 'db.active_tracker'),
     }
 }
 
