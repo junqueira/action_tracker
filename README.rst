@@ -35,5 +35,4 @@ Resources
 ---------
 
 * `Code <https://github.com/nokiadev/action_tracker>`_
-* `Bug Tracker <https://github.com/nokiadev/action_tracker/issues>`
-*_
+* `Bug Tracker <https://github.com/nokiadev/action_tracker/issues>`_
