@@ -1,8 +1,9 @@
 Action Tracker
 ==============
 
+A task and project management system with Angular
 
-test
+
 Requirements
 ------------
 
