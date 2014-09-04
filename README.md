@@ -1,9 +1,38 @@
 Action Tracker
 ==============
 
-A task and project management system with Angular
+
+Topics
+
+    Description
+    Images
+    How I can help
+    Where I can start
+    Links
+    Resources
+        Documentation
+        Bugtracker
 
 
+Description
+===========
+
+A task and project management system with Angular and fun!.
+
+
+Images or Screenshots
+=====================
+
+TODO
+
+
+How can I help
+==============
+
+TODO
+
+Links
+=====
 Requirements
 ------------
 
@@ -14,3 +43,11 @@ Requirements
 - Celery - <https://github.com/celery/celery>
 - RabbitMQ - <http://www.rabbitmq.com/>
 - Tastypie - <http://tastypieapi.org/>
+
+
+Resources
+=========
+
+- https://github.com/nokiadev/action_tracker
+
+
