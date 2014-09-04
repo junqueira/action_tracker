@@ -41,3 +41,26 @@ class TaskDependency(models.Model):
     def save(self):
         if self.dependent_task == self.depends_on:
             raise AttributeError('A Task cannot depend on itself.')
+
+
+class Comment(models.Model):
+    #log fields
+    creation_date = models.DateTimeField(auto_now_add=True)
+    last_update = models.DateTimeField(auto_now=True)
+
+
+class MainComment(Comment):
+    title = models.CharField(max_length=200, null=False)
+    description = models.TextField(null=False)
+    user = models.ForeignKey(User)
+    task = models.ForeignKey(Task)
+
+
+class Reply(Comment):
+    comment = models.ForeignKey(MainComment)
+    user = models.ForeignKey(User)
+
+
+class UserCommentTag(models.Model):
+    user = models.ManyToManyField(User)
+    comment = models.ForeignKey(Comment)
