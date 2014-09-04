@@ -27,3 +27,13 @@ class TaskAssignedTo(models.Model):
 
     user = models.ForeignKey(User)
     task = models.ForeignKey(Task)
+
+
+class TaskDependency(models.Model):
+    #log fields
+    creation_date = models.DateTimeField(auto_now_add=True)
+
+    # This reference points to a Task that needs some other Task to be concluded.
+    dependent_task = models.ForeignKey(Task, related_name='dependent_task')
+    # This, in turn, points to the specific Task that is holding the conclusion of another one.
+    depends_on = models.ForeignKey(Task, related_name='depends_on')
