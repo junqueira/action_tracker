@@ -1,6 +1,9 @@
 Action Tracker
 ==============
 
+.. image:: https://travis-ci.org/nokiadev/action_tracker.png
+   :target: https://travis-ci.org/nokiadev/action_tracker
+   :alt: Travis CI build status
 
 Description
 -----------
