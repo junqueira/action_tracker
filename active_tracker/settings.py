@@ -116,11 +116,6 @@ except IOError:
     pass
 
 
-# Context processors ( Global variables for templates )
-TEMPLATE_CONTEXT_PROCESSORS += (
-    # FIXME: this is one security fail, you can import requests, get or post
-    "common.context_processors.global_vars",
-)
 
 # Autoload i18n tag in all templates
 template.add_to_builtins('common.filters')
