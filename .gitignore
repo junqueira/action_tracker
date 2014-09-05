@@ -62,3 +62,4 @@ docs/_build/
 
 *.db
 .DS_Store
+settings_local.py
