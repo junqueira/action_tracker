@@ -60,5 +60,5 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-README.rst
 *.db
+.DS_Store

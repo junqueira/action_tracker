@@ -44,7 +44,6 @@ PROJECT_APPS = (
 
 THIRDY_APPS = (
     'djangular',
-    'public',
 )
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRDY_APPS
@@ -104,3 +103,11 @@ TASTYPIE_FULL_DEBUG = True
 API_LIMIT_PER_PAGE = 100
 TASTYPIE_ALLOW_MISSING_SLASH = False
 TASTYPIE_DEFAULT_FORMATS = ['json']
+
+# Local settings
+try:
+    settings_local = os.path.join(BASE_DIR, 'active_tracker', 'settings_local.py')
+    execfile(settings_local)
+except IOError:
+    pass
+
