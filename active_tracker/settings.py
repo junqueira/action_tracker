@@ -44,6 +44,7 @@ PROJECT_APPS = (
 
 THIRDY_APPS = (
     'djangular',
+    'django_extensions',
 )
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRDY_APPS
