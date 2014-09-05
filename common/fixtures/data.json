@@ -1,0 +1,141 @@
+[
+    {
+        "pk": 2,
+        "model": "auth.user",
+        "fields": {
+            "username": "juan",
+            "first_name": "Juan Manuel",
+            "last_name": "Betancourt",
+            "password": "pbkdf2_sha256$12000$nN4yOydCh4mk$WL0bLMSCXSdfJKYLrzFEYLBDqEsYTANKMDCYmEYpOr4=",
+            "email": "juanman234@gmail.com"
+         }
+     },
+
+    {
+        "pk": 1,
+        "model": "centre.Centre",
+        "fields": {
+            "name": "Test Centre 1",
+            "address": "388 Pacific Highway Crows Nest NSW 2765",
+            "phone": 61283992525
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "imageresource.ImageResource",
+        "fields": {
+            "createdby": "Juan Manuel Betancourt",
+            "f": "image_resource/trebol.png"
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "pdfresource.PDFResource",
+        "fields": {
+            "createdby": "Juan Manuel Betancourt",
+            "f": "pdf_resource/wireframe.tif"
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "employee.Employee",
+        "fields": {
+            "user": 2,
+            "address": "Calle 45 # 67 - 89 Int 6 Apto 321",
+            "phone": 4432345,
+            "dob": "1978-12-12"
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "request.Request",
+        "fields": {
+            "date": "2013-11-28",
+            "status": "New",
+            "statusby": "George",
+            "employee": 2
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "shift.Shift",
+        "fields": {
+            "centre": 1,
+            "employee": 2,
+            "date": "2013-11-28",
+            "startime": "06:00",
+            "endtime": "18:00",
+            "signature": "signature/signature.png"
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "breaks.Break",
+        "fields": {
+            "shift": 1,
+            "startbreak": "09:00",
+            "endbreak": "10:00"
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "checklistresource.Checklist",
+        "fields": {
+            "name": "Items for work"
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "checklistresource.ChecklistQuestion",
+        "fields": {
+            "name": "Pen",
+            "checklist": 1
+        }
+    },
+
+    {
+        "pk": 2,
+        "model": "checklistresource.ChecklistQuestion",
+        "fields": {
+            "name": "Notebook",
+            "checklist": 1
+        }
+    },
+
+    {
+        "pk": 3,
+        "model": "checklistresource.ChecklistQuestion",
+        "fields": {
+            "name": "Glasses",
+            "checklist": 1
+        }
+    },
+
+    {
+        "pk": 1,
+        "model": "reports.Report",
+        "fields": {
+            "answer": "Yes",
+            "checklistquestion": 1,
+            "date": "2013-11-29"
+        }
+    },
+
+    {
+        "pk": 2,
+        "model": "reports.Report",
+        "fields": {
+            "answer": "No",
+            "checklistquestion": 2,
+            "date": "2013-11-29"
+        }
+    }
+]

@@ -10,6 +10,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import django.conf.global_settings as DEFAULT_SETTINGS
+from django import template
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -36,9 +40,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'tracker',
     'djangular',
     'public',
+    'users',
+    'dashboard',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,3 +97,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
+
+# Context processors ( Global variables for templates )
+TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
+    "common.context_processors.global_vars",
+)
+
+# Autoload i18n tag in all templates
+template.add_to_builtins('common.filters')
+

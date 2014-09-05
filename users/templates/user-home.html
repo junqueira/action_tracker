@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{%block BODY %}
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Users</h1>
+
+            <p class="text-right">
+                <a class="btn btn-primary" href="{% url 'users:new' %}">New</a>
+                <a class="btn btn-primary" href="{% url 'dashboard:home' %}">Back</a> -->
+            </p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Is active?</th>
+                        <th>Is superuser?</th>
+                        <th>Is staff?</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for object in objects %}
+                        <tr>
+                            <td>{{ object.username }}</td>
+                            <td>{{ object.email }}</td>
+                            <td class="text-center">{{ object.is_active }}</td>
+                            <td class="text-center">{{ object.is_superuser }}</td>
+                            <td class="text-center">{{ object.is_staff }}</td>
+                            <td>
+                                <ul class="list-unstyled">
+                                    <li><a href="{% url 'users:edit' object.id %}">edit</a> </li>
+                                    <li><a class="delete-link" href="{% url 'users:delete' object.id %}">delete</a> </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            {% if objects.paginator.num_pages > 1 %}
+                <div class="pagination">
+                    {% if objects.has_previous %}
+                        <a href="?page={{ objects.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Página {{ objects.number }} de {{ objects.paginator.num_pages }}.
+                    </span>
+
+                    {% if objects.has_next %}
+                        <a href="?page={{ objects.next_page_number }}">next</a>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
