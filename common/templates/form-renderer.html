@@ -1,0 +1,24 @@
+{% csrf_token %}
+
+{% if form.errors %}
+    <div class="alert alert-danger">Data entered has some errors</div>
+{% endif %}
+
+{% for hidden in form.hidden_fields %}
+    {{ field }}
+{% endfor %}
+
+{% for field in form.visible_fields %}
+
+    <div class="form-group{% if field.errors %} has-error{% endif %}">
+        <label for="id_{{ field.html_name }}" class="control-label">{{ field.label }} {% if field.field.required %}<span class="required-asterisk">*</span>{% endif %}</label>
+        <div>{{ field }}</div>
+        {% if field.help_text %}
+            <span class='help-block'>{{ field.help_text }}</span>
+        {% endif %}
+        {% if field.errors %}
+            <span class='help-block'>{{ field.errors }}</span>
+        {% endif %}
+    </div>
+
+{% endfor %}

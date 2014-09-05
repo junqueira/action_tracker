@@ -1,0 +1,15 @@
+{% for hidden in form.hidden_fields %}
+    {{ field }}
+{% endfor %}
+
+{% for field in form.visible_fields %}
+
+    <div class="form-group">
+        <label for="id_{{ field.html_name }}" class="control-label">{{ field.label }}:</label>
+
+        <div class="form-group">
+            {{ field.value }}
+        </div>
+    </div>
+
+{% endfor %}

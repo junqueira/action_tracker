@@ -10,8 +10,9 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+from django import template
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -40,6 +41,8 @@ DJANGO_APPS = (
 PROJECT_APPS = (
     'tracker',
     'public',
+    'users',
+    'dashboard',
 )
 
 THIRDY_APPS = (
@@ -91,8 +94,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
@@ -110,4 +114,14 @@ try:
     execfile(settings_local)
 except IOError:
     pass
+
+
+# Context processors ( Global variables for templates )
+TEMPLATE_CONTEXT_PROCESSORS += (
+    # FIXME: this is one security fail, you can import requests, get or post
+    "common.context_processors.global_vars",
+)
+
+# Autoload i18n tag in all templates
+template.add_to_builtins('common.filters')
 
